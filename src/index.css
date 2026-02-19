@@ -12,3 +12,15 @@ body{
   display: none;
 
 }
+
+/* #tasklist::-webkit-scrollbar {
+  background-color: transparent;
+  height: 5px;
+
+}
+
+#tasklist::-webkit-scrollbar-thumb {
+
+  background-color: rgb(143, 143, 143);
+  border-radius: 50px;
+} */
