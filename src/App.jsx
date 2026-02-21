@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import Login from './components/Auth/Login'
 import EmployeeDashboard from './components/dashboard/EmployeeDashboard'
 import AdminDashboard from './components/Dashboard/AdminDashboard'
+import { AuthContext } from './context/AuthProvider'
 
 const App = () => {
 
@@ -18,6 +19,10 @@ const App = () => {
       alert('Invalid Credentials')
     }
   }
+
+  const data = useContext(AuthContext)
+  console.log(data);
+  
 
   // Just to see when user changes
   useEffect(() => {
@@ -36,3 +41,4 @@ const App = () => {
 }
 
 export default App
+
