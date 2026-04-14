@@ -1,6 +1,7 @@
 const employees = [
   {
     id: 1,
+    firstName: "Durga",
     email: "employee1@example.com",
     password: "123",
     tasks: [
@@ -38,6 +39,7 @@ const employees = [
   },
   {
     id: 2,
+    firstName: "Biswajit",
     email: "employee2@example.com",
     password: "123",
     tasks: [
@@ -60,31 +62,12 @@ const employees = [
         taskDescription: "Add profile editing feature",
         taskDate: "2026-02-19",
         category: "Development"
-      },
-      {
-        active: false,
-        newTask: false,
-        completed: true,
-        failed: false,
-        taskTitle: "Bug Testing",
-        taskDescription: "Test login functionality",
-        taskDate: "2026-02-17",
-        category: "Testing"
-      },
-      {
-        active: false,
-        newTask: false,
-        completed: false,
-        failed: true,
-        taskTitle: "Database Setup",
-        taskDescription: "Configure MongoDB database",
-        taskDate: "2026-02-14",
-        category: "Backend"
       }
     ]
   },
   {
     id: 3,
+    firstName: "Rahul",
     email: "employee3@example.com",
     password: "123",
     tasks: [
@@ -97,31 +80,12 @@ const employees = [
         taskDescription: "Create landing page mockup",
         taskDate: "2026-02-20",
         category: "Design"
-      },
-      {
-        active: false,
-        newTask: false,
-        completed: true,
-        failed: false,
-        taskTitle: "Form Validation",
-        taskDescription: "Implement form validation logic",
-        taskDate: "2026-02-16",
-        category: "Development"
-      },
-      {
-        active: true,
-        newTask: false,
-        completed: false,
-        failed: false,
-        taskTitle: "SEO Optimization",
-        taskDescription: "Improve website SEO",
-        taskDate: "2026-02-19",
-        category: "Marketing"
       }
     ]
   },
   {
     id: 4,
+    firstName: "Sneha",
     email: "employee4@example.com",
     password: "123",
     tasks: [
@@ -134,31 +98,12 @@ const employees = [
         taskDescription: "Document all REST APIs",
         taskDate: "2026-02-20",
         category: "Documentation"
-      },
-      {
-        active: false,
-        newTask: false,
-        completed: true,
-        failed: false,
-        taskTitle: "Optimize Images",
-        taskDescription: "Compress website images",
-        taskDate: "2026-02-15",
-        category: "Optimization"
-      },
-      {
-        active: false,
-        newTask: false,
-        completed: false,
-        failed: true,
-        taskTitle: "Deploy Project",
-        taskDescription: "Deploy on production server",
-        taskDate: "2026-02-10",
-        category: "Deployment"
       }
     ]
   },
   {
     id: 5,
+    firstName: "Priya",
     email: "employee5@example.com",
     password: "123",
     tasks: [
@@ -171,26 +116,6 @@ const employees = [
         taskDescription: "Discuss project requirements",
         taskDate: "2026-02-20",
         category: "Management"
-      },
-      {
-        active: true,
-        newTask: false,
-        completed: false,
-        failed: false,
-        taskTitle: "Prepare Report",
-        taskDescription: "Prepare weekly progress report",
-        taskDate: "2026-02-19",
-        category: "Management"
-      },
-      {
-        active: false,
-        newTask: false,
-        completed: true,
-        failed: false,
-        taskTitle: "Code Review",
-        taskDescription: "Review team code submissions",
-        taskDate: "2026-02-17",
-        category: "Development"
       }
     ]
   }
@@ -199,6 +124,7 @@ const employees = [
 const admin = [
   {
     id: 1,
+    firstName: "Admin",
     email: "admin@example.com",
     password: "123"
   }
@@ -207,13 +133,10 @@ const admin = [
 export const setLocalStorage = () => {
   localStorage.setItem('employees', JSON.stringify(employees))
   localStorage.setItem('admin', JSON.stringify(admin))
-
 }
+
 export const getLocalStorage = () => {
   const employees = JSON.parse(localStorage.getItem('employees'))
   const admin = JSON.parse(localStorage.getItem('admin'))
-  
-  return {employees, admin}
-  
-  
+  return { employees, admin }
 }
